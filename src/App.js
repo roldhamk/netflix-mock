@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Bar from "./components/Bar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    bar: [
+      { text: "What is Netflix?" },
+      { text: "How much does Netflix cost?" },
+      { text: "Where can I watch?" },
+      { text: "How do I cancel?" },
+      { text: "What can I watch on Netflix?" },
+      { text: "How does the free trial work?" }
+    ]
+  };
+  render() {
+    const bars = this.state.bar.map((bars, index) => {
+      return <Bar text={bars.text} key={index} />;
+    });
+    return (
+      <div className="app">
+        <div className="header">
+          <div className="title">
+            <h1>Frequently Asked Questions</h1>
+          </div>
+        </div>
+        <div className="main">{bars}</div>
+        <button className="trial">Try 30 days free ></button>
+      </div>
+    );
+  }
 }
 
 export default App;

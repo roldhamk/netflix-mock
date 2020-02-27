@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.bar {
+  display: flex;
+  width: 800px;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  width: 500px;
+  height: 500px;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.bar button {
+  border: none;
+  padding: 20px;
+  width: 100%;
+  background: rgb(54, 53, 53);
+  color: white;
+  font-size: 18px;
+  font-family: "Spartan";
+  display: flex;
+  justify-content: space-between;
+  outline: none;
+}
+
+.trial {
+  border: none;
+  font-size: 18px;
+  font-family: "Spartan";
+  height: 40px;
+  width: 250px;
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  outline: none;
 }
